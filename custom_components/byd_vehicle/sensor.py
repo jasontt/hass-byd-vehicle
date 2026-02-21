@@ -127,12 +127,21 @@ SENSOR_DESCRIPTIONS: tuple[BydSensorDescription, ...] = (
         ),
     ),
     BydSensorDescription(
-        key="power",
+        key="power_rate",
         source="realtime",
         native_unit_of_measurement=UnitOfPower.KILO_WATT,
         device_class=SensorDeviceClass.POWER,
         state_class=SensorStateClass.MEASUREMENT,
         icon="mdi:lightning-bolt",
+    ),
+    BydSensorDescription(
+        key="power_gl",
+        source="realtime",
+        native_unit_of_measurement=UnitOfPower.WATT,
+        device_class=SensorDeviceClass.POWER,
+        state_class=SensorStateClass.MEASUREMENT,
+        icon="mdi:lightning-bolt",
+        value_fn=lambda x: -x.power_gl if x.power_gl is not None else None
     ),
     # Tire pressures – unit resolved dynamically from tire_press_unit;
     # kPa is the default because most BYD vehicles report tirePressUnit=3.
