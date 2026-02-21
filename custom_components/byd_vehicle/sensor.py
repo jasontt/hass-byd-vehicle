@@ -129,7 +129,7 @@ SENSOR_DESCRIPTIONS: tuple[BydSensorDescription, ...] = (
     BydSensorDescription(
         key="power",
         source="realtime",
-        native_unit_of_measurement=UnitOfPower,
+        native_unit_of_measurement=UnitOfPower.KILO_WATT,
         device_class=SensorDeviceClass.POWER,
         state_class=SensorStateClass.MEASUREMENT,
         icon="mdi:lightning-bolt",
