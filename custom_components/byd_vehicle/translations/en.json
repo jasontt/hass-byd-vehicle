@@ -97,6 +97,9 @@
       "temp_in_car": {
         "name": "Cabin temperature"
       },
+      "power": {
+        "name": "Power"
+      },
       "left_front_tire_pressure": {
         "name": "Front left tire pressure"
       },

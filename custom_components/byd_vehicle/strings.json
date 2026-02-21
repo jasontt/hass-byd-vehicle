@@ -87,6 +87,7 @@
       "total_mileage": { "name": "Odometer" },
       "speed": { "name": "Speed" },
       "temp_in_car": { "name": "Cabin temperature" },
+      "power": { "name": "Power" },
       "left_front_tire_pressure": { "name": "Front left tire pressure" },
       "right_front_tire_pressure": { "name": "Front right tire pressure" },
       "left_rear_tire_pressure": { "name": "Rear left tire pressure" },

@@ -22,6 +22,7 @@ from homeassistant.const import (
     PERCENTAGE,
     EntityCategory,
     UnitOfLength,
+    UnitOfPower,
     UnitOfPressure,
     UnitOfSpeed,
     UnitOfTemperature,
@@ -124,6 +125,14 @@ SENSOR_DESCRIPTIONS: tuple[BydSensorDescription, ...] = (
         value_fn=lambda obj: (
             int(round(obj.temp_in_car)) if obj.temp_in_car is not None else None
         ),
+    ),
+    BydSensorDescription(
+        key="power",
+        source="realtime",
+        native_unit_of_measurement=UnitOfPower,
+        device_class=SensorDeviceClass.POWER,
+        state_class=SensorStateClass.MEASUREMENT,
+        icon="mdi:lightning-bolt",
     ),
     # Tire pressures – unit resolved dynamically from tire_press_unit;
     # kPa is the default because most BYD vehicles report tirePressUnit=3.
